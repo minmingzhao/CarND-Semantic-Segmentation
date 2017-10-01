@@ -4,7 +4,8 @@ import helper
 import warnings
 from distutils.version import LooseVersion
 import project_tests as tests
-
+import glob
+import cv2
 
 # Check TensorFlow Version
 assert LooseVersion(tf.__version__) >= LooseVersion('1.0'), 'Please use TensorFlow version 1.0 or newer.  You are using {}'.format(tf.__version__)
@@ -147,6 +148,18 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
 
 
 tests.test_train_nn(train_nn)
+
+def process_image_to_video(path):
+    fourcc = cv2.VideoWriter_fourcc(*'XVID')
+    out = cv2.VideoWriter('Output.avi', fourcc, 5.0, (576, 160))
+    for filename in glob.glob("./runs/images/*.png"):
+        image = cv2.imread(filename)
+        out.write(image)
+        print("finished {0}".format(filename))
+    out.release()
+# path = './'
+# process_image_to_video(path)
+
 
 
 def run():
