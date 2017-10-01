@@ -21,18 +21,29 @@ Training loss was reduced from initial 1.5 to 0.3 after 50 epochs, further reduc
 
 #### Sample image output
 [//]:#(image references)
-[um_000005.png]:./runs/images/um_000005.png
-[um_000019.png]:./runs/images/um_000019.png
-[um_000024.png]:./runs/images/um_000024.png
-[umm_000008.png]:./runs/images/umm_000008.png
-[umm_000014.png]:./runs/images/umm_000014.png
-[umm_000077.png]:./runs/images/umm_000077.png
+[um_000005.png]: ./runs/images/um_000005.png
+
+[um_000019.png]: ./runs/images/um_000019.png
+
+[um_000024.png]: ./runs/images/um_000024.png
+
+[umm_000008.png]: ./runs/images/umm_000008.png
+
+[umm_000014.png]: ./runs/images/umm_000014.png
+
+[umm_000077.png]: ./runs/images/umm_000077.png
+
 
 ![alt text][um_000005.png]
+
 ![alt text][um_000019.png]
+
 ![alt text][um_000024.png]
+
 ![alt text][umm_000008.png]
+
 ![alt text][umm_000014.png]
+
 ![alt text][umm_000077.png]
 
 ### Setup
