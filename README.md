@@ -20,7 +20,6 @@ batch_size: 5
 Training loss was reduced from initial 1.5 to 0.3 after 50 epochs, further reduced to 0.08 at 100 epochs. 
 
 #### Sample image output
-[//]:#(image references)
 
 [um_000005.png]: ./runs/images/um_000005.png
 
