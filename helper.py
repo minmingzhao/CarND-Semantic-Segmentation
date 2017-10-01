@@ -10,6 +10,7 @@ import tensorflow as tf
 from glob import glob
 from urllib.request import urlretrieve
 from tqdm import tqdm
+import cv2
 
 
 class DLProgress(tqdm):
@@ -92,6 +93,15 @@ def gen_batch_function(data_folder, image_shape):
                 gt_image = np.concatenate((gt_bg, np.invert(gt_bg)), axis=2)
 
                 images.append(image)
+                gt_images.append(gt_image)
+
+                flip_image = cv2.flip(image, 1)
+                images.append(flip_image)
+                gt_image = scipy.misc.imresize(scipy.misc.imread(gt_image_file), image_shape)
+                gt_image = cv2.flip(gt_image, 1)
+                gt_bg = np.all(gt_image == background_color, axis=2)
+                gt_bg = gt_bg.reshape(*gt_bg.shape, 1)
+                gt_image = np.concatenate((gt_bg, np.invert(gt_bg)), axis=2)
                 gt_images.append(gt_image)
 
             yield np.array(images), np.array(gt_images)
