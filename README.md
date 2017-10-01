@@ -21,6 +21,7 @@ Training loss was reduced from initial 1.5 to 0.3 after 50 epochs, further reduc
 
 #### Sample image output
 [//]:#(image references)
+
 [um_000005.png]: ./runs/images/um_000005.png
 
 [um_000019.png]: ./runs/images/um_000019.png
